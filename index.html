@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+body{
+    width: 100vw;
+    height: 100vh;
+}
+        #map {
+            width: 100vw;
+            height: 100vh;
+            bottom: 0px;
+            /* position: relative; */
+
+        }
+
+        #signs {
+            float: left;
+            width: 12rem;
+            height: 2rem;
+            position: relative;
+            top: -35rem;
+            left: 3rem;
+            bottom: 0;
+            backdrop-filter: blur(1rem);
+            color: white;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        #signs div {
+            width: 12rem;
+            height: 2rem;
+
+        }
+
+        #red {
+            background-color: red;
+        }
+
+        #blue {
+            background-color: rgb(0, 102, 255);
+        }
+
+        #yellow {
+            background-color: rgb(255, 204, 0);
+        }
+
+        #green {
+            background-color: rgb(153, 255, 204);
+        }
+
+   
+    </style>
+
+<body>
+    <div id='map'></div>
+    <div id='signs'>
+        <div id="red"><label>cases > 800 </label></div>
+        <div id="blue"><label>cases > 350</label></div>
+        <div id="yellow"><label>cases > 100</label></div>
+        <div id="green"><label>cases < 100 </label></div>
+    </div>
+
+
+
+</body>
+<script src="index.js"></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.js'></script>
+
+<script>
+
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYWJoaXNoZWtyMjgyIiwiYSI6ImNscXh6cjFiNDAwNXMybHJxMXRlajlkcHIifQ.rEQQ9urUpicR_nZ6Gbz8hQ';
+    var map = new mapboxgl.Map({
+        container: 'map', 
+        style: 'mapbox://styles/mapbox/dark-v10', 
+        zoom: 1,
+        center: [0, 20]
+    });
+</script>
+
+
+</html>
